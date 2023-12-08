@@ -22,32 +22,40 @@
         rel="stylesheet">
 </head>
 
-<body>
-    <h1 class="titulo1">Listado de Productos</h1>
-    <br><br><br>
-    <div class="contenedor-centrado">
-        <a class="menu" href="index.html">Menu principal</a>
-    </div>
+<body class="contenedor">
     <br><br>
-    <table class = "lista"> <!-- Se crea una tabla para mostrar los productos. -->
-        <thead> <!--Encabezado de la tabla con columnas para código, descripción, cantidad, precio y acciones.-->
-            <tr>
-                <th>Código</th>
-                <th>Modelo</th>
-                <th>Cantidad</th>
-                <th align="right">Precio</th>
-                <th>Imagen1</th>
-                <th>Imagen2</th>
-                <th>Imagen3</th>
-                <th>Descripción</th>
-                <th>Estilo</th>
-                <th align="right">Proveedor</th>
 
-            </tr>
-         </thead>
-         <tbody id="tablaProductos"> </tbody>
-    </table>
-      
+    <br>
+    <header class="encabezado">
+        <h3 class="titulo3">Listado de productos</h3>
+
+
+    </header>
+    <main class="contenido">
+
+        <div>
+            <a class="menu" href="index.html">Menu principal</a>
+        </div>
+        <br><br>
+        <table class="tabla"> <!-- Se crea una tabla para mostrar los productos.ff -->
+            <thead> <!--Encabezado de la tabla con columnas para código, descripción, cantidad, precio y acciones.-->
+                <tr>
+                    <th>Código</th>
+                    <th>Modelo</th>
+                    <th>Cantidad</th>
+                    <th align="right">Precio</th>
+                    <th>Imagen1</th>
+                    <th>Imagen2</th>
+                    <th>Imagen3</th>
+                    <th>Descripción</th>
+                    <th>Estilo</th>
+                    <th align="right">Proveedor</th>
+
+                </tr>
+            </thead>
+            <tbody id="tablaProductos"> </tbody>
+        </table>
+        <br><br>
 
 
         <script>
@@ -99,12 +107,11 @@
 
                 //Captura y maneja errores, mostrando una alerta en caso de error al obtener los productos.
                 .catch(function (error) {
-                	console.log('fabrierror:', error);
                     // Código para manejar errores
                     alert('Error al obtener los productos.');
                 });
         </script>
- 
+    </main>
 </body>
 
 </html>

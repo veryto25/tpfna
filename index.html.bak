@@ -24,7 +24,7 @@
 
 <body class="contenedor">
     <header class="encabezado">
-        <h1 class="titulo1">Dime que si!</h1>
+        <h1 class="titulo1"> Dime que si!</h1>
         <br><br><br>
         <h3 class="titulo3">Menu del usuario</h3>
     </header>
@@ -37,22 +37,16 @@
                 <td class="contenedor-centrado "><a class="bt" href="listado.html">Listado de productos</a></td>
             </tr>
             <tr>
-                <td class="contenedor-centrado "><a class="bt" href="modificaciones.html">Modificar datos de
-                        productos</a></td>
+                <td class="contenedor-centrado "><a class="bt" href="modificaciones.html">Modificar datos de productos</a></td>
             </tr>
             <tr>
-                <td class="contenedor-centrado "><a class="bt" href="listadoEliminar.html">Eliminar productos</a>
-                </td>
-
-            </tr>
-            <tr>
-                <td class="contenedor-centrado "><a class="bt" href="https://656e2326bc841305fa3e68b1--thriving-travesseiro-81ad45.netlify.app/">Acceso a e-commerce</a>
-                </td>
-
+                <td class="contenedor-centrado "><a class="bt" href="listadoEliminar.html">Eliminar productos</a></td>
             </tr>
         </table>
     </main>
-    <footer class="pie"></footer>
+    <footer class="pie">
+
+    </footer>
 </body>
 
 </html>

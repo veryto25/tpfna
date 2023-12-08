@@ -23,8 +23,8 @@
 </head>
 
 <body>
-    <h1 class="titulo1">Modificar Productos del Inventario</h1>
-    
+    <h1>Modificar Productos del Inventario</h1>
+
 
     <!-- Contenedor principal que será controlado por Vue.js. Este contenedor tendrá dos formularios. -->
     <div id="app">
@@ -40,7 +40,7 @@
             <h2>Datos del Producto</h2>
             <form @submit.prevent="guardarCambios">
                 <label for="modeloModificar">Modelo:</label>
-                <input type="text" id="Modificar" v-model="modelo" required><br>
+                <input type="text" id="descripcionModificar" v-model="modelo" required><br>
 
                 <label for="cantidadModificar">Cantidad:</label>
                 <input type="number" id="cantidadModificar" v-model="cantidad" required><br>
@@ -50,18 +50,8 @@
 
                 <!-- Imagen actual del producto -->
                 <!-- <img v-if="imagen_url && !imagenSeleccionada" :src="'https://www.pythonanywhere.com/user/veronicapersano/files/home/veronicapersano/mysite/static/imagenes/' + imagen_url"
-                <!--  alt="Imagen del producto" style="max-width: 200px;"> -->
+                    alt="Imagen del producto" style="max-width: 200px;"> -->
 
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
                 <!-- Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere -->
                 <img v-if="imagen1_url && !imagen1Seleccionada"
                     :src="'https://www.pythonanywhere.com/user/veronicapersano/files/home/veronicapersano/mysite/static/imagenes/' + imagen1_url"
@@ -85,13 +75,13 @@
 
                 <!-- Input para nueva imagen -->
                 <label for="nuevaImagen1">Nueva Imagen1:</label>
-                <input type="file" id="nuevaImagen1" @change="seleccionarImagen1"><br>
+                <input type="file" id="nuevaImagen" @change="seleccionarImagen"><br>
 
                 <label for="nuevaImagen2">Nueva Imagen2:</label>
-                <input type="file" id="nuevaImagen2" @change="seleccionarImagen2"><br>
+                <input type="file" id="nuevaImagen" @change="seleccionarImagen"><br>
 
-                <label for="nuevaImagen3">Nueva Imagen3:</label>
-                <input type="file" id="nuevaImagen3" @change="seleccionarImagen3"><br>
+                <label for="nuevaImagen3">Nueva Imagen2:</label>
+                <input type="file" id="nuevaImagen" @change="seleccionarImagen"><br>
 
                 <label for="descripcionModificar">Descripción:</label>
                 <input type="text" id="descripcionModificar" v-model="descripcion" required><br>
@@ -108,7 +98,7 @@
         </div>
     </div>
 
-    <script src="https://unpkg.com/vue@next"></script>
+    <!-- <script src="http://127.0.0.1:5000/"></script> -->
     <script>
         //const URL = "http://veronicapersano.pythonanywhere.com/"
 
@@ -118,7 +108,7 @@
 
         //Vue.createApp para crear nuestra aplicación Vue.
         const app = Vue.createApp({
-            
+
             //La función data devuelve un objeto que contiene las siguientes propiedades: 
             data() {
                 return {

@@ -133,8 +133,8 @@ class Catalogo:
 # Cuerpo del programa
 #--------------------------------------------------------------------
 # Crear una instancia de la clase Catalogo
-catalogo = Catalogo(host='localhost', user='root', password='root', database='siapp')
-#catalogo = Catalogo(host='USUARIO.mysql.pythonanywhere-services.com', user='USUARIO', password='CLAVE', database='USUARIO$siapp')
+# catalogo = Catalogo(host='localhost', user='root', password='root', database='siapp')
+catalogo = Catalogo(host='veronicapersano.mysql.pythonanywhere-services.com', user='veronicapersano', password='veryto25', database='veronicapersano$siapp')
 
 # catalogo.agregar_producto(1, "Televisor 25",11, 340000, "tele.jpg","tele.jpg","tele.jpg", "tele","linda", 1)
 #catalogo.agregar_producto(2, "Notebook",11, 740000, "compu.jpg","compu.jpg", "compu.jpg","note" ,"linda",1)
@@ -142,10 +142,10 @@ catalogo = Catalogo(host='localhost', user='root', password='root', database='si
 
 
 # Carpeta para guardar las imagenes.
-RUTA_DESTINO = './static/imagenes'
+#RUTA_DESTINO = './static/imagenes'
 
 #Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
-#RUTA_DESTINO = '/home/USUARIO/mysite/static/imagenes'
+RUTA_DESTINO = '/home/veronicapersano/mysite/static/imagenes'
 
 
 #--------------------------------------------------------------------
@@ -322,8 +322,14 @@ def eliminar_producto(codigo):
         
         
         # Y si existe, la elimina del sistema de archivos.
-        if os.path.exists(ruta_imagen1, ruta_imagen2, ruta_imagen3):
-            os.remove(ruta_imagen1, ruta_imagen2, ruta_imagen3)
+        if os.path.exists(ruta_imagen1):
+            os.remove(ruta_imagen1)
+            
+        if os.path.exists(ruta_imagen2):
+            os.remove(ruta_imagen2)
+        
+        if os.path.exists(ruta_imagen3):
+            os.remove(ruta_imagen3)  
 
         # Luego, elimina el producto del catálogo
         if catalogo.eliminar_producto(codigo):

@@ -199,7 +199,6 @@ def agregar_producto():
     # Me aseguro que el producto exista
     producto = catalogo.consultar_producto(codigo)
     if not producto: # Si no existe el producto...
-       
         # Genero el nombre de la imagen1
         nombre_imagen1 = secure_filename(imagen1.filename) #Chequea el nombre del archivo de la imagen, asegurándose de que sea seguro para guardar en el sistema de archivos
         nombre_base1, extension = os.path.splitext(nombre_imagen1) #Separa el nombre del archivo de su extensión.
